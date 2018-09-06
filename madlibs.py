@@ -9,3 +9,5 @@ a=input('Enter an adjective: ')
 p=input('Enter a place: ')
 
 print("The "+a+" "+n+" went "+v+" at the "+p)
+#so it doesn't immediately exit when using terminal/powershell/command prompt
+input()
