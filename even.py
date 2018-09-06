@@ -1,5 +1,5 @@
 #CMPT 120L
-#Stuff
+#Evens
 #Author: Linus Trahair
 #Created: 6th Sep 2018
 
