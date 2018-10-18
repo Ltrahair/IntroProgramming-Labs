@@ -11,8 +11,20 @@ while True:
     Pans=input("\n Guess what I am thinking:\n").lower()
     if Pans==answer:
         print("you won!")
+       
+        while True:
+             Pans=input("do you like this animal?(y/n)\n")
+             if Pans[0]=="y":
+                print("yay!")
+                break
+             elif Pans[0]=="n":
+                print(";(")
+                break
+             else:
+                print("invalid response")
+            
         break
-    elif Pans=="quit":
+    elif Pans[0]=="q":
         break
     else:
         print("nope I was thinking of a different animal\n")
