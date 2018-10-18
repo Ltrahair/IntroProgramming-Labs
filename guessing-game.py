@@ -8,9 +8,11 @@ answer="penguin"
 
 while True:
     print("\n I am thinking of some type of animal")
-    Pans=input("\n Guess what I am thinking:\n")
+    Pans=input("\n Guess what I am thinking:\n").lower()
     if Pans==answer:
         print("you won!")
+        break
+    elif Pans=="quit":
         break
     else:
         print("nope I was thinking of a different animal\n")
