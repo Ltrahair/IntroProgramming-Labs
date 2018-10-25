@@ -5,7 +5,7 @@
 def showIntro():
     print("Welcome to the Arithmetic Engine!")
     print("=================================\n")
-    print("Valid commands are 'add', 'mult', 'sub', 'div', and 'quit'.\n")
+    print("Valid commands are 'add', 'mult', 'sub', 'div','pow', and 'quit'.\n")
 def showOutro():
     print("\nThank you for using the Arithmetic Engine…")
     print("\nPlease come back again soon!")
@@ -14,7 +14,7 @@ def doLoop():
         cmd = input("What computation do you want to perform? ").lower()
         if cmd =="quit":
             break
-        elif not cmd=="add" and not cmd=="sub" and not cmd=="mult" and not cmd=="div":
+        elif not cmd=="add" and not cmd=="sub" and not cmd=="pow" and not cmd=="mult" and not cmd=="div":
             print("invalid command, use add, sub, mult, div, or quit.")
             continue
         else:
@@ -37,7 +37,8 @@ def doLoop():
                 except:
                     print("can't divide by zero\n")
                     continue
-          
+            elif cmd=="pow":
+                result=num1**num2
                
             
         print("The result is " + str(result) + ".\n")
