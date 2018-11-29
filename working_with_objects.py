@@ -47,10 +47,10 @@ def main():
         prodId = int(vals[0])
         count = int(vals[1])
         
-        if products[prodId].productQuantity >= count:
-            if cash >= products[prodId].productPrice * count:
-                products[prodId].productQuantity -= count
-                cash -= products[prodId].productPrice * count
+        if products[prodId].isThatMany(count):
+            if cash >= products[prodId].totalCost(count):
+                products[prodId].removeProducts(count)
+                cash -= products[prodId].totalCost(count)
                 print("You purchased", count, products[prodId].productName+".")
                 print("You have $", "{0:.2f}".format(cash), "remaining.")
             else:
