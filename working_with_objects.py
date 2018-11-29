@@ -41,7 +41,8 @@ def main():
         printStock()
         
         vals = input("Enter product ID and quantity you wish to buy: ").split(" ")
-        
+        if len(vals)<1:
+            continue
         if vals[0] == "quit": break
         
         prodId = int(vals[0])
